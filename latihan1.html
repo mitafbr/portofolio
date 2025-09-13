@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Website Pertamaku</title>
+    <style>
+        /* CSS sama seperti yang kamu buat */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            background-color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #4f46e5;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #7c3aed;
+        }
+        section {
+            padding: 3rem 0;
+        }
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background-color: white;
+            border-radius: 10px;
+            margin: 2rem auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #4f46e5;
+        }
+        .btn {
+            display: inline-block;
+            background: #4f46e5;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: background 0.3s;
+            font-weight: 600;
+        }
+        .btn:hover {
+            background: #7c3aed;
+        }
+        .about, .services, .contact {
+            background: white;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+        }
+        h2 {
+            color: #4f46e5;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .service-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        .service-icon {
+            font-size: 2.5rem;
+            color: #4f46e5;
+            margin-bottom: 15px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        .social-links {
+            margin-top: 15px;
+        }
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Website Pertamaku</h1>
+            <p>Belajar membuat website dari nol</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#services">Layanan</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <section id="home" class="hero">
+            <h2>Halo! Selamat Datang di Website Saya</h2>
+            <p>Saya sedang belajar web development dan ini adalah website pertama saya.</p>
+            <p>Website ini dibuat menggunakan HTML dan CSS murni.</p>
+            <a href="#about" class="btn">Pelajari Lebih Lanjut</a>
+        </section>
+        
+        <section id="about" class="about">
+            <h2>Tentang Saya</h2>
+            <p>Saya adalah seorang pemula yang sedang belajar membuat website. Ini adalah project pertama saya menggunakan HTML dan CSS.</p>
+            <p>Saya belajar secara otodidak melalui tutorial online dan dokumentasi. Tujuan saya adalah menjadi web developer yang handal.</p>
+            <p>Website ini merupakan langkah pertama saya dalam perjalanan belajar web development.</p>
+        </section>
+        
+        <section id="services" class="services">
+            <h2>Layanan</h2>
+            <p>Untuk saat ini, saya masih dalam proses belajar. Nantinya saya akan menawarkan jasa pembuatan website sederhana.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Web Development</h3>
+                    <p>Pembuatan website modern dan responsive</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Web Design</h3>
+                    <p>Desain UI/UX yang menarik dan user-friendly</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>SEO Optimization</h3>
+                    <p>Optimasi website untuk mesin pencari</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="contact">
+            <h2>Kontak</h2>
+            <p>Jika Anda tertarik untuk bekerja sama atau memiliki pertanyaan, silakan hubungi saya:</p>
+            <p>Email: email@contoh.com</p>
+            <p>Telepon: 081234567890</p>
+            <p>Alamat: Jalan Contoh No. 123, Kota Contoh</p>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Website Pertamaku. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a> | 
+                <a href="#">Instagram</a> | 
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
