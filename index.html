@@ -347,7 +347,7 @@
   </div>
  </div>
   <div class="stats">
-    <div class="stat"><b data-count="9">0</b><span>proyek pilihan</span></div>
+    <div class="stat"><b data-count="10">0</b><span>proyek pilihan</span></div>
     <div class="stat"><b data-count="3">0</b><span>dunia: web, mobile, IoT</span></div>
     <div class="stat"><b data-count="3">0</b><span>penghargaan lomba</span></div>
   </div>
@@ -446,6 +446,15 @@
    c = tiga warna tema proyek. Ganti di sini kalau mau menyesuaikan. */
 const PROJECTS = [
   {
+    name: 'Kulkasku', sub: 'Pengingat sayur & buah sebelum layu', kind: 'Mobile · Web',
+    demo: 'https://mitafbr.github.io/kulkasku/',
+    apk: 'https://github.com/mitafbr/kulkasku/releases/download/v1.0.5/app-release.apk',
+    code: 'https://github.com/mitafbr/kulkasku',
+    c: ['#9fe0a6', '#ffb27a', '#dff5d2'],
+    desc: 'Sayur di kulkas sering ketahuan layu pas udah telat? Kulkasku menghitung tanggal layunya dari tanggal beli dan suhu kulkas, lalu mengingatkan sehari sebelumnya. Isinya tampil di kulkas dua pintu yang bisa dibuka, ditemani maskot Mumu. Tugas akhir Bootcamp BTNG 2026 Divisi Mobile.',
+    tags: ['Flutter', 'Dart', 'Supabase', 'REST API', 'Android']
+  },
+  {
     name: 'AREAKU', sub: 'Radar usaha lokal di sekitarku', kind: 'Web · Mobile',
     status: 'Sedang dikembangkan',
     demo: '',   // link website yang sudah online, contoh: 'https://mitafbr.github.io/areaku/'
@@ -537,6 +546,7 @@ function show(i, byUser) {
   const p = PROJECTS[current];
   ['--a1', '--a2', '--a3'].forEach((v, k) => root.style.setProperty(v, p.c[k]));
   const links = (p.demo ? `<a class="btn primary" href="${p.demo}" target="_blank" rel="noopener">Buka website ↗</a>` : '')
+    + (p.apk ? `<a class="btn" href="${p.apk}" rel="noopener">Unduh APK ↓</a>` : '')
     + (p.code ? `<a class="btn" href="${p.code}" target="_blank" rel="noopener">Lihat kode ↗</a>` : '')
     + (p.status ? `<span class="soon">${p.status}</span>` : '')
     || '<span class="soon">Link menyusul</span>';
